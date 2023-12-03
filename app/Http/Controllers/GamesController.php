@@ -16,25 +16,22 @@ class GamesController extends Controller
         $video_games_list = Videogame::orderBy('id','desc')->get();
         //dd($video_games_list);
         return view('index',[
-            'video_game_list_html' => $video_games_list
-        ]);
+            'video_game_list_html' => $video_games_list ]);
     }
 
     public function create(){
         $categories_list = Category::all();
         //dd($categories_list);
         return view('create', [
-            'category_list_html' => $categories_list
-        ]);
+            'category_list_html' => $categories_list ]);
     }
 
     public function help($name_game, $category = null){
         $date = now();
-        return view('show', [
+        return view('show',[
             'name_game_html'=> $name_game,
             'category_html'=> $category,
-            'date_html' => $date
-        ]);
+            'date_html' => $date ]);
     }
     /*
     public function help($name_game, $category = null){
