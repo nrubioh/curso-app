@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
+    <title>Games Create</title>
 </head>
 <body>
-    <h1>New create view created by Controller</h1>
-    <p><a href="{{route ('gamesIndex')}}"> Link to index/games </a></p>
+    <h1>Create View</h1>
+    <p><a href="{{route ('gamesIndex')}}"> Link to index </a></p>
     
-    
-    <h2>Welcome to GamesList</h2>
-        <h2>Form to upload games</h2>
+    <h2>Form to upload games</h2>
         <form action="{{route('gamesStoreVideogame')}}" method="POST"> 
             @csrf {{-- token --}}
 

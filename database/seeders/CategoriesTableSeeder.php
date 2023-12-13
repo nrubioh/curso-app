@@ -13,7 +13,6 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run(): void
     {        
-        //
         $category1 = new Category;
         $category1->name = "Sport";
         $category1->description = "Football, Tennis , Basketball";
@@ -37,5 +36,11 @@ class CategoriesTableSeeder extends Seeder
         $category4->description = "HalfLife, GoW";
         $category4->active = true;
         $category4->save();
+
+        $category5 = new Category;
+        $category5->name = "Indie";
+        $category5->description = "Fall guys, Hades, etc";
+        $category5->active = true;
+        $category5->save();
     }
 }

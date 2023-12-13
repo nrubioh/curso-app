@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>New index view created by function index in -> 'class GamesController'</h1>
-    <p><a href="{{route ('gamesCreate')}}">Link to /games/create.</a></p>
+    <p><a href="{{route ('gamesCreate')}}">Link to /games/create </a></p>
     <h2>Welcome to GamesList</h2>
     <table border="1">
         <thead>
@@ -21,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            @forelse ($video_game_list_html as $item)
+            @forelse ($video_game_list_html as $item) {{-- fn index in GamesController --}}
                 <tr style="text-align: center">  
                     <td>{{ $item->id }}</td>
                     <td><a href="{{route('gamesView',$item->id)}}">{{$item->name}}</a></td>

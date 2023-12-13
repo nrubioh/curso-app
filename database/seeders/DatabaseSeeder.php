@@ -10,9 +10,6 @@ use App\Models\Videogame;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
         // \App\Models\User::factory(10)->create();
@@ -23,7 +20,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             CategoriesTableSeeder::class,
-            VideogamesTableSeeder::class
+            VideogamesTableSeeder::class,
         ]);
         Videogame::factory(200)->create();
     }

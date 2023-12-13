@@ -13,7 +13,7 @@ class GamesController extends Controller
 {
     public function index(){
         //$video_games_list = array('Final Fantasy IX','Pokemon Yellow','ToyStory 2','Mario Galaxy');
-        $video_games_list = Videogame::orderBy('id','desc')->get();
+        $video_games_list = Videogame::orderBy('id','asc')->get();
         //dd($video_games_list);
         return view('index',[
             'video_game_list_html' => $video_games_list ]);
